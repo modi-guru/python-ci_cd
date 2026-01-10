@@ -52,11 +52,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version:${{matrix.python-version}}
+          python-version:${{ matrix.python-version }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip installl ".[dev]"
+          pip install ".[dev]"
       - name: automated tests with pytest
         run: |
           pytest
@@ -68,6 +68,6 @@ jobs:
     steps:
       - name: release
         run: echo "release"
-        
+
         
 
