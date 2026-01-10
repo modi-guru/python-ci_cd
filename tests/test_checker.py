@@ -51,7 +51,7 @@ def test_check_urls_client_error(mocker: MockerFixture):
         ),
         (
             requests.exceptions.RequestException,
-            "REQUEST_ERROR: RequestException",
+            "REQUEST_ERROR:RequestException",
         ),
     ],
 )
