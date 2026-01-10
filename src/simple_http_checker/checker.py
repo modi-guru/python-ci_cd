@@ -54,7 +54,7 @@ def check_urls(
                 f"Connection error occurred for URL: {url}"
             )
         except requests.RequestException as e:
-            status = f"request_error:{type(e).__name__}"
+            status = f"REQUEST_ERROR:{type(e).__name__}"
             logger.error(
                 f"An error occurred for URL: {url} - {e}",
                 exc_info=True,
