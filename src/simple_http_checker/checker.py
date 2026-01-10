@@ -46,10 +46,10 @@ def check_urls(
                     f"{response.status_code} {response.reason}"
                 )
         except requests.exceptions.Timeout:
-            status = "timeout"
+            status = "TIMEOUT"
             logger.warning(f"Timeout occurred for URL: {url}")
         except requests.exceptions.ConnectionError:
-            status = "connection error"
+            status = "CONNECTION_ERROR"
             logger.warning(
                 f"Connection error occurred for URL: {url}"
             )
